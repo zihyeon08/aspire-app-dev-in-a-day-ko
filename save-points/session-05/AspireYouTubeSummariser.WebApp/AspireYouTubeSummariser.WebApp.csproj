@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.StackExchange.Redis.OutputCaching" Version="$(AspireVersion)" />
+    <PackageReference Include="Aspire.StackExchange.Redis.OutputCaching" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
