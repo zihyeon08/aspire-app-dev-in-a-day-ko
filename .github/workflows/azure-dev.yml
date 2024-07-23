@@ -7,8 +7,10 @@ on:
       - main
       - master
 
+    # 아래 두 줄 추가 👇
     paths:
       - "workshop/**/*"
+    # 위 두 줄 추가 👆
 
 # GitHub Actions workflow to deploy to Azure using azd
 # To configure required secrets for connecting to Azure, simply run `azd pipeline config`
@@ -88,4 +90,3 @@ jobs:
           pushd ./workshop
           azd deploy --no-prompt
           popd
-

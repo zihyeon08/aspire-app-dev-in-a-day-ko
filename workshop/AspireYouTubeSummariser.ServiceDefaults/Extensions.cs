@@ -13,6 +13,7 @@ using OpenTelemetry.Trace;
 using Polly;
 
 namespace Microsoft.Extensions.Hosting;
+
 // Adds common .NET Aspire services: service discovery, resilience, health checks, and OpenTelemetry.
 // This project should be referenced by each service project in your solution.
 // To learn more about using this project, see https://aka.ms/dotnet/aspire/service-defaults
@@ -28,8 +29,8 @@ public static class Extensions
 
         builder.Services.ConfigureHttpClientDefaults(http =>
         {
-
-            // 수정 후 - 타임아웃 설정값을 60초로 변경
+            // Turn on resilience by default
+            // http.AddStandardResilienceHandler();
             http.AddResilienceHandler("custom", builder =>
             {
                 // See: https://www.pollydocs.org/strategies/retry.html

@@ -1,0 +1,6 @@
+variables:
+  AZURE_RESOURCE_GROUP: rg-zihyeon08
+
+steps:
+  - script: az deployment group create --resource-group $(AZURE_RESOURCE_GROUP) --template-file azuredeploy.json
+    displayName: "Deploy Azure Resources"

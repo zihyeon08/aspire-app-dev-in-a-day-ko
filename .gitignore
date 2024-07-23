@@ -488,6 +488,7 @@ $RECYCLE.BIN/
 appsettings.Development.json
 appsettings.Production.json
 bundle.js
+# 변경 후
 bundle.js.*.txt
 # workshop*/
 z-demo*/

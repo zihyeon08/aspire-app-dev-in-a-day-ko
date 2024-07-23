@@ -1,17 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <IsAspireHost>true</IsAspireHost>
-    <UserSecretsId>43f3e264-e37d-445a-9a2e-40d2079adfc8</UserSecretsId>
+    <OutputType>Exe</OutputType>
+
+    <UserSecretsId>c86b168f-0abb-4a82-b830-7b75af6e2b83</UserSecretsId>
+
+    <AssemblyName>AspireYouTubeSummariser.AppHost</AssemblyName>
+    <RootNamespace>AspireYouTubeSummariser.AppHost</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.2" />
-    <PackageReference Include="Aspire.Hosting.Redis" Version="8.0.2" />
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="$(AspireVersion)" />
+    <PackageReference Include="Aspire.Hosting.Redis" Version="$(AspireVersion)" />
   </ItemGroup>
 
   <ItemGroup>
