@@ -88,6 +88,6 @@ jobs:
       - name: Deploy Application
         run: |
           pushd ./workshop
-          azd deploy --no-prompt
+          azd deploy --no-prompt --environment zihyeon08
           popd
 
