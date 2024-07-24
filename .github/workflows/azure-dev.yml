@@ -31,7 +31,6 @@ jobs:
       AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
       AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
     steps:
-    
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -83,7 +82,7 @@ jobs:
       - name: Provision Infrastructure
         run: |
           pushd ./workshop
-          azd provision --no-prompt
+          azd provision --no-prompt --resource-group rg-zihyeon08
           popd
 
       - name: Deploy Application
@@ -91,3 +90,4 @@ jobs:
           pushd ./workshop
           azd deploy --no-prompt
           popd
+
