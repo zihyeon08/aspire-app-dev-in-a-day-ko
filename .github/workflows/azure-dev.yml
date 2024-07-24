@@ -82,7 +82,7 @@ jobs:
       - name: Provision Infrastructure
         run: |
           pushd ./workshop
-          azd provision --no-prompt --resource-group rg-zihyeon08
+          azd provision --no-prompt --environment zihyeon08
           popd
 
       - name: Deploy Application
