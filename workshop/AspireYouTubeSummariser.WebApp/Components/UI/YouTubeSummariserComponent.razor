@@ -10,15 +10,13 @@
         <div class="col">
             <div class="mb-3">
                 <label for="youtube-link" class="form-label"><strong>YouTube Link</strong></label>
-                <input class="form-control" id="youtube-link" placeholder="Add YouTube link here"
-                    @bind="youTubeLinkUrl" />
+                <input class="form-control" id="youtube-link" placeholder="Add YouTube link here" @bind="youTubeLinkUrl" />
             </div>
         </div>
         <div class="col">
             <div class="mb-3">
                 <label for="video-language-code" class="form-label"><strong>Video Language</strong></label>
-                <select class="form-select" id="video-language-code" aria-label="Video language code"
-                    @bind="videoLanguageCode">
+                <select class="form-select" id="video-language-code" aria-label="Video language code" @bind="videoLanguageCode">
                     <option value="en" selected>English</option>
                     <option value="ko">Korean</option>
                 </select>
@@ -27,8 +25,7 @@
         <div class="col">
             <div class="mb-3">
                 <label for="summary-language-code" class="form-label"><strong>Summary Language</strong></label>
-                <select class="form-select" id="summary-language-code" aria-label="Summary language code"
-                    @bind="summaryLanguageCode">
+                <select class="form-select" id="summary-language-code" aria-label="Summary language code" @bind="summaryLanguageCode">
                     <option value="en" selected>English</option>
                     <option value="ko">Korean</option>
                 </select>
@@ -38,16 +35,15 @@
 
     <div class="row">
         <div class="mb-3">
-            <button type="button" id="summary" class="btn btn-primary" @onclick="SummariseAsync">Summary</button>
-            <button type="button" class="btn btn-secondary" @onclick="ClearAsync">Clear</button>
+            <button type="button" class="btn btn-primary" @onclick="SummariseAsync">Summarise!</button>
+            <button type="button" class="btn btn-secondary" @onclick="ClearAsync">Clear!</button>
         </div>
     </div>
 
     <div class="row">
         <div class="mb-3">
             <label for="summary" class="form-label"><strong>Summary</strong></label>
-            <textarea class="form-control" id="result" rows="10" placeholder="Result will show here"
-                readonly>@summaryResult</textarea>
+            <textarea class="form-control" id="summary" rows="10" placeholder="Result will show here" readonly>@summaryResult</textarea>
         </div>
     </div>
 </div>
