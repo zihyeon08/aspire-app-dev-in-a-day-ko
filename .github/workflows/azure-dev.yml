@@ -6,9 +6,10 @@ on:
     branches:
       - main
       - master
-
+    # 아래 두 줄 추가 👇
     paths:
-      - "workshop/**/*"
+      - 'workshop/**/*'
+    # 위 두 줄 추가 👆
 
 # GitHub Actions workflow to deploy to Azure using azd
 # To configure required secrets for connecting to Azure, simply run `azd pipeline config`
@@ -31,7 +32,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Install .NET 8 SDK
         uses: actions/setup-dotnet@v4
         with:
@@ -76,7 +77,7 @@ jobs:
         shell: pwsh
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
-
+      # 변경후
       - name: Provision Infrastructure
         run: |
           pushd ./workshop
@@ -88,4 +89,3 @@ jobs:
           pushd ./workshop
           azd deploy --no-prompt
           popd
-
